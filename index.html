@@ -1,0 +1,17 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <div id="map" style="height:560px;"></div>
+  <script>
+    var map = L.map('map');
+    var tiles = L.tileLayer('/{z}/{x}/{y}', {
+      minZoom: 9, maxZoom: 15, tms: true,
+      bounds: [[8.0075,-85.979],[11.2619,-82.5403]]
+	}).addTo(map);
+	map.setView([10.2595,-84.1827], 9);
+	</script>
+</body>
+</html>
